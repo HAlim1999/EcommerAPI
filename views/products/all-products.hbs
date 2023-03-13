@@ -1,0 +1,26 @@
+
+<div class="row mt-2">
+  {{#each products}}
+    <div class="col-sm-3 mt-2" > 
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title d-flex justify-content-between aling-itens-center">
+            
+            {{name}} <a href="/products/edit/{{_id}}"><i class="bi bi-pencil"></i></a>
+
+          </h4>
+          <p>{{imgURL}}</p>
+          <p>{{price}}</p>
+          <p>{{countInStock}}</p>
+          <p>{{category}}</p>
+          <form action="/products/delete/{{_id}}?_method=DELETE" method="POST">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit" class="btn btn-danger btn-block -btn-sm">Delete</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  {{/each}} 
+</div>

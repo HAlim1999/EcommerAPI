@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="container-sm row mt-2">
+    {{#each markets}}
+      <div class="col-sm-3 mt-2">
+        <div class="card">
+          <div class="card-body">
+            <form action="/cart/add" method="POST">
+              <h4
+                class="card-title d-flex justify-content-between aling-itens-center"
+              >
+
+                <input
+                  type="text"
+                  name="name"
+                  value=" {{name}}"
+                  readonly
+                  class="container border border-0"
+                />
+
+              </h4>
+              <img src="{{imgURL}}" whidt="20" class="img-fluid" />
+              <p name="price">PRECIO $
+                <input
+                  type="number"
+                  name="price"
+                  value="{{price}}"
+                  readonly
+                  class="container border border-0"
+                />
+              </p>
+
+              <p>STOCK: {{countInStock}}</p>
+              <p>CATEGORIA: {{category}}</p>
+
+              <input type="number" name="quantity" class="container" />
+              <button
+                type="submit"
+                class="container btn btn-primary btn-block -btn-sm mt-2"
+              >Buy</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    {{/each}}
+  </div>
+
+</div>

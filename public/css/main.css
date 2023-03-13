@@ -1,0 +1,13 @@
+.margen{
+  margin-left: 70%;
+}
+.img{
+  width: 50px;
+}
+
+@media (max-width: 992px){
+
+  .margen{
+    margin-left: 0%;
+  }
+}

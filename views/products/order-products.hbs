@@ -1,0 +1,42 @@
+
+<div class="container mt-2">
+
+
+
+  <table class="table table-hover">
+
+    <thead>
+    <tr>
+        <th >User</th>
+        <th >NOMBRE</th>
+        <th  >PRECIO</th>
+        <th  >CANTIDAD</th>
+        <th  >DELETE</th>
+    </tr>
+  </thead>
+   <tbody>
+
+  {{#each order}}
+    <tr>
+      <td >{{user}}</td>
+      <td >{{name}}</td>
+      <td >{{price}}</td>
+      <td >{{quantity}}</td>
+      <td >
+          <form action="/order/delete/{{_id}}?_method=DELETE" method="POST">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit" class="btn btn-danger btn-block -btn-sm">Delete</button>
+          </form>
+      </td>
+    </tr>
+  {{/each}}
+   </tbody>
+  </table>
+
+
+
+        </div>
+      </div>
+    </div>
+
+</div>
