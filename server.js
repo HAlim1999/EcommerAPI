@@ -63,7 +63,7 @@ app.use((req, res, next) => {
 
 
 //Routes
-app.use(require('./routes/index.routes.js'))
+app.use('/', require('./routes/index.routes.js'))
 app.use(require('./routes/products.routes.js'))
 app.use(require('./routes/user.routes.js'))
 app.use(require('./routes/market.routes.js'))
