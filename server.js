@@ -22,7 +22,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs.engine({
   runtimeOptions: {
     allowProtoPropertiesByDefault: true,
-    allowProtoMethodsByDefault: true
+    allowProtoMethodsByDefault: true 
   },
   defaultLayout: 'main',
   layoutsDir: path.join(app.get('views'), 'layouts'),
