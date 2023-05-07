@@ -5,7 +5,6 @@ const morgan = require('morgan');
 const MethodOverride = require('method-override');
 const flash = require('connect-flash');
 const session = require('express-session');
-const { request } = require('http');
 const passport = require('passport');
 const bodyParser = require('body-parser');
 
